@@ -51,9 +51,9 @@ class ProduitController extends Controller
 
     if ($request->hasFile('image')) {
         $imagePath = $request->file('image')->store('produits/images', 'public');
-        $validatedData['image'] = $imagePath;
+        $validatedData['image'] = "/storage/".$imagePath;
     } else {
-        $validatedData['image'] = 'default.jpg'; // Set the default image
+        $validatedData['image'] = '/storage/default.jpg'; // Set the default image
     }
 
     Produit::create($validatedData);

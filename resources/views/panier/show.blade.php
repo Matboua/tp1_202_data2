@@ -24,7 +24,7 @@
                                     <div class="flex items-center">
                                         <img
                                             class="h-16 w-16 mr-4"
-                                            src="{{$item->image}}"
+                                            src="{{url($item->image)}}"
                                             alt="{{$item->nom}} image"
                                         />
                                         <span class="font-semibold"

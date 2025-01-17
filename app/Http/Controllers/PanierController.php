@@ -45,7 +45,7 @@ class PanierController extends Controller
         }
         $total = $this->calculTotal($panier);
         $produits = Produit::findMany(array_keys($panier));
-        return view('panier.show', compact('produits', 'total'));
+        return view('panier.show', compact('produits', 'total', 'panier'));
     }
 
     private function calculTotal($panier){

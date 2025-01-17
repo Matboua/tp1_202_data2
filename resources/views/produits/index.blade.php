@@ -49,13 +49,7 @@
                         <td class="py-2 px-4 border-b">{{ $produit->quantite }}</td>
                         <td class="py-2 px-4 border-b">{{ $produit->description }}</td>
                         <td class="py-2 px-4 border-b">{{ $produit->categorie->nom }}</td>
-                        <td class="border px-4 py-2">
-                            @if($produit->image)
-                                <img src="{{ asset('storage/' . $produit->image) }}" alt="{{ $produit->nom }}" style="max-width: 100px;">
-                            @else
-                                Pas d'image
-                            @endif
-                        </td>
+                        <td class="border px-4 py-2"> <img src="{{$produit->image}}" alt="Product"/></td>
                         <!-- Image   -->
                         <td class="py-2 px-4 border-b">
                             <a href="{{ route('produits.show', $produit->id) }}" class="text-blue-500 hover:underline">Details</a>
