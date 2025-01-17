@@ -17,7 +17,7 @@ return new class extends Migration
             $table->decimal(('prix'));
             $table->unsignedInteger('quantite');
             $table->text('description')->nullable();
-            $table->foreignId('categorie_id')->constrained();
+            $table->foreignId('categorie_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

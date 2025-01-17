@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Commande extends Model
 {
     use HasFactory;
-    protected $fillable = ['client_id', 'date', 'montant'];
+    protected $fillable = ['client_id', 'date', 'montant', 'status'];
 
     public function produits(){
         return $this->BelongsToMany(Produit::class)->withPivot('quantite');
